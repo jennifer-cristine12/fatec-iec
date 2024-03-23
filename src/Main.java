@@ -1,3 +1,5 @@
+import Model.Calculadora;
+
 import javax.swing.*;
 
 public class Main {
@@ -20,29 +22,14 @@ public class Main {
                 options[0]);
 
         switch (operation) {
-            case "Soma" -> result = somar(firstNumber, secondNumber);
-            case "Subtração" -> result = subtrair(firstNumber, secondNumber);
-            case "Multiplicação" -> result = multiplicar(firstNumber, secondNumber);
-            case "Divisão" -> result = dividir(firstNumber, secondNumber);
+            case "Soma" -> result = Calculadora.somar(firstNumber, secondNumber);
+            case "Subtração" -> result = Calculadora.subtrair(firstNumber, secondNumber);
+            case "Multiplicação" -> result = Calculadora.multiplicar(firstNumber, secondNumber);
+            case "Divisão" -> result = Calculadora.dividir(firstNumber, secondNumber);
         }
 
         JOptionPane.showMessageDialog(null, "O resultado foi: " + result);
 
     }
 
-    private static Double somar(Double n1, Double n2) {
-        return n1 + n2;
-    }
-
-    private static Double subtrair(Double n1, Double n2) {
-        return n1 - n2;
-    }
-
-    private static Double multiplicar(Double n1, Double n2) {
-        return n1 * n2;
-    }
-
-    private static Double dividir(Double n1, Double n2) {
-        return n1 / n2;
-    }
 }
