@@ -20,5 +20,8 @@ public class Calculadora {
     public static Double potencia(Double n1, Double n2){
         return Math.pow(n1, n2);
     }
+    public static Double raiz(Double n1){
+        return Math.sqrt(n1);
+    }
 
 }

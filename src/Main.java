@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
 
         String operation;
-        Object[] options = {"Soma", "Subtração", "Multiplicação", "Divisão", "Potencia"};
+        Object[] options = {"Soma", "Subtração", "Multiplicação", "Divisão", "Potenciação","Raiz"};
         Double result = 0.0;
 
         Double firstNumber = Double.parseDouble(JOptionPane.showInputDialog("Escolha o primeiro número"));
@@ -27,6 +27,7 @@ public class Main {
             case "Multiplicação" -> result = Calculadora.multiplicar(firstNumber, secondNumber);
             case "Divisão" -> result = Calculadora.dividir(firstNumber, secondNumber);
             case "Potencia" -> result = Calculadora.potencia(firstNumber, secondNumber);
+            case "Raiz"-> result = Calculadora.raiz(firstNumber);
         }
 
         JOptionPane.showMessageDialog(null, "O resultado foi: " + result);
