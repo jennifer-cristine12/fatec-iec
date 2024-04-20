@@ -1,12 +1,12 @@
 import Model.Calculadora;
 
-import javax.swing.*;
+import javax.swing.JOptionPane;
 
 public class Main {
     public static void main(String[] args) {
 
         String operation;
-        Object[] options = {"Soma", "Subtração", "Multiplicação", "Divisão"};
+        Object[] options = {"Soma", "Subtração", "Multiplicação", "Divisão", "Potencia"};
         Double result = 0.0;
 
         Double firstNumber = Double.parseDouble(JOptionPane.showInputDialog("Escolha o primeiro número"));
@@ -26,6 +26,7 @@ public class Main {
             case "Subtração" -> result = Calculadora.subtrair(firstNumber, secondNumber);
             case "Multiplicação" -> result = Calculadora.multiplicar(firstNumber, secondNumber);
             case "Divisão" -> result = Calculadora.dividir(firstNumber, secondNumber);
+            case "Potencia" -> result = Calculadora.potencia(firstNumber, secondNumber);
         }
 
         JOptionPane.showMessageDialog(null, "O resultado foi: " + result);
